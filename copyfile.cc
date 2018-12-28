@@ -1,4 +1,4 @@
-#include "jade.hpp"
+#include "include/jade.hpp"
 
 
 SUB COPYFILE ( STRING src_file, STRING dest_file ) DO

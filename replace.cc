@@ -1,4 +1,4 @@
-#include "jade.hpp"
+#include "include/jade.hpp"
 
 FUNCTION STRING REPLACE$ (STRING subject, CONSTANT STRING& search, CONSTANT STRING& replace) DO
     DIM AS size_t pos = 0;

@@ -1,4 +1,4 @@
-#include "jade.hpp"
+#include "include/jade.hpp"
 
 FUNCTION STRARRAY SPLIT (CONSTANT STRING src, CONSTANT STRING delim) DO
     REGQUERY re(delim); // regex pattern or text

@@ -1,4 +1,4 @@
-#include "jade.hpp"
+#include "include/jade.hpp"
 
 FUNCTION STRING MCASE$ (STRING S) DO
   DIM AS STRING tmpStr(S);

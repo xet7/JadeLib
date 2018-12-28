@@ -1,4 +1,4 @@
-#include "jade.hpp"
+#include "include/jade.hpp"
 
 FUNCTION STRING FORMAT$ (CONSTANT STRING fmt, ...) DO
     DIM AS VECTOR<char> str(100,'\0');

@@ -1,4 +1,4 @@
-#include "jade.hpp"
+#include "include/jade.hpp"
 
 FUNCTION STRING REPEAT$ (STRING input, INTEGER num, STRING sep) DO
     STRING ret;

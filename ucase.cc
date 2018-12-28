@@ -1,4 +1,4 @@
-#include "jade.hpp"
+#include "include/jade.hpp"
 
 FUNCTION STRING UCASE$ (STRING str) DO
   DIM AS STRING  name(str);

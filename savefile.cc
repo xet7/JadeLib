@@ -1,4 +1,4 @@
-#include "jade.hpp"
+#include "include/jade.hpp"
 
 SUB SAVEFILE (STRING src, STRING fname) DO
   DIM AS std::ofstream outfile;

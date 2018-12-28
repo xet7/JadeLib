@@ -1,4 +1,4 @@
-#include "jade.hpp"
+#include "include/jade.hpp"
 
 FUNCTION STRING GRAB$ (CONSTANT STRING &src, CONSTANT STRING &start, CONSTANT STRING &stop) DO
     DIM AS size_t begin = src.find(start);

@@ -1,4 +1,4 @@
-#include "jade.hpp"
+#include "include/jade.hpp"
 
 FUNCTION STRING SPLITPATH$ (STRING FPATH, INT mask) DO
   DIM AS STRING  fullPath(FPATH);

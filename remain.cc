@@ -1,4 +1,4 @@
-#include "jade.hpp"
+#include "include/jade.hpp"
 
 FUNCTION STRING REMAIN$ (STRING src, STRING match) DO
     STRING tmpStr;

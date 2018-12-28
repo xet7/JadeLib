@@ -1,4 +1,4 @@
-#include "jade.hpp"
+#include "include/jade.hpp"
 
 FUNCTION STRING LOADFILE$ (STRING N) DO
     std::ifstream infile(N);

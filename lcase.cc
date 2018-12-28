@@ -1,4 +1,4 @@
-#include "jade.hpp"
+#include "include/jade.hpp"
 
 FUNCTION STRING LCASE$ (STRING str) DO
   DIM AS STRING  name(str);
