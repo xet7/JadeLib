@@ -31,7 +31,13 @@ install: $(LIB)
 	install -m 644 $(LIB) $(PREFIX)/lib
 	install -m 644 $(INC) $(PREFIX)/include
 	@echo "Library Installed"
-	
+
+uninstall:
+	@echo "Uninstalling libjade..."
+	@rm -f $(PREFIX)/lib/libjade.a
+	@rm -f $(PREFIX)/include/jade.hpp
+	@echo "Uninstall complete."
+
 # To remove generated files
 clean:
 	@rm -f $(LIB) $(OBJECTS)
