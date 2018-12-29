@@ -8,6 +8,6 @@ FUNCTION INTEGER TALLY (STRING subject, STRING search) DO
          pos++;
     WEND
     RETURN cnt;
-ENDFUNCTION
+END
 
 

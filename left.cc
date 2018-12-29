@@ -2,5 +2,5 @@
 
 FUNCTION STRING LEFT$ (STRING s, INT length) DO
   RETURN s.substr(0,length);
-ENDFUNCTION
+END
 

@@ -5,5 +5,5 @@ FUNCTION INT INSTR (STRING  s,STRING  match, size_t offset) DO
       RETURN 0;
   ENDIF
   RETURN s.find(match,offset);
-ENDFUNCTION
+END
 

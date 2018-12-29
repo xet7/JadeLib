@@ -9,5 +9,5 @@ FUNCTION STRING REGEX (STRING src, STRING query) DO
         result = match[1];
     }
     return result;
-ENDFUNCTION
+END
 

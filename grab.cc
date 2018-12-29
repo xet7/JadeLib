@@ -6,5 +6,5 @@ FUNCTION STRING GRAB$ (CONSTANT STRING &src, CONSTANT STRING &start, CONSTANT ST
     size_t term = src.find(stop);
 
     return src.substr(end, (term - end));
-ENDFUNCTION
+END
 

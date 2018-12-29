@@ -9,5 +9,5 @@ FUNCTION STRING REPLACE$ (STRING subject, CONSTANT STRING& search, CONSTANT STRI
          pos += replace.length();
     END
     RETURN subject;
-ENDFUNCTION
+END
 

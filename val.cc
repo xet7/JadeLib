@@ -2,5 +2,5 @@
 
 FUNCTION INT VAL (STRING str) DO
     RETURN std::stoi(str);
-ENDFUNCTION
+END
 
