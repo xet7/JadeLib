@@ -17,12 +17,8 @@
 #define DECLARE
 #define FUNCTION
 #define ENDFUNCTION }
-#define DIM
-#define AS
-#define DEF
 #define SUB void
 #define ENDSUB }
-#define BEGIN {
 #define END }
 #define AND &&
 #define OR ||
