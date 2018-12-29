@@ -16,9 +16,7 @@
 #define ENDMAIN }
 #define DECLARE
 #define FUNCTION
-#define ENDFUNCTION }
 #define SUB void
-#define ENDSUB }
 #define END }
 #define AND &&
 #define OR ||
