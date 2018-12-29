@@ -2,3 +2,5 @@
 lib/
 *.o
 bin/
+generate-keywords
+
