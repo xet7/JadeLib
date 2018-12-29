@@ -1,9 +1,9 @@
 #include "include/jade.hpp"
 
 FUNCTION STRING FORMAT$ (CONSTANT STRING fmt, ...) DO
-    DIM AS VECTOR<char> str(100,'\0');
-    DIM AS va_list ap;
-    DIM AS INT n;
+    VECTOR<char> str(100,'\0');
+    va_list ap;
+    INT n;
 
     WHILE (TRUE) {
         va_start(ap, fmt);

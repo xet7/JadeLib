@@ -1,9 +1,9 @@
 #include "include/jade.hpp"
 
 FUNCTION STRING SPLITPATH$ (STRING FPATH, INT mask) DO
-  DIM AS STRING  fullPath(FPATH);
-  DIM AS STRING  path, filename, extension;
-  DIM AS STRING::size_type  lastSlashPos, extPos;
+  STRING  fullPath(FPATH);
+  STRING  path, filename, extension;
+  STRING::size_type  lastSlashPos, extPos;
 
   lastSlashPos=fullPath.find_last_of("/");
   extPos=fullPath.find_last_of(".");

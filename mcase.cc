@@ -1,9 +1,9 @@
 #include "include/jade.hpp"
 
 FUNCTION STRING MCASE$ (STRING S) DO
-  DIM AS STRING tmpStr(S);
-  DIM AS bool capFlag = FALSE;
-  DIM AS size_t i;
+  STRING tmpStr(S);
+  bool capFlag = FALSE;
+  size_t i;
 
 
   std::transform(tmpStr.begin(),tmpStr.end(),tmpStr.begin(),::tolower);
