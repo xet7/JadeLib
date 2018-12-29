@@ -1,4 +1,4 @@
-#include "../jade.hpp"
+#include "../include/jade.hpp"
 
 MAIN 
     COPYFILE("copyfile.cc","BLAH.txt");

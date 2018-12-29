@@ -1,4 +1,4 @@
-#include "../jade.hpp"
+#include "../include/jade.hpp"
 
 MAIN
     STRING file_contents(LOADFILE$("testload.cc"));

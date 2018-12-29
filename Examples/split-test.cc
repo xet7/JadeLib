@@ -1,5 +1,5 @@
 
-#include "../jade.hpp"
+#include "../include/jade.hpp"
 
 MAIN
 	VAR s = "Hello World! This is JADE, splitting strings using strings delimiters! Just-for-you!";

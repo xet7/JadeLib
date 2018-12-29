@@ -1,4 +1,4 @@
-#include "../jade.hpp"
+#include "../include/jade.hpp"
 
 MAIN 
     PRINT(REPEAT$("ABC",5,", "));

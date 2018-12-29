@@ -1,4 +1,4 @@
-#include "../jade.hpp"
+#include "../include/jade.hpp"
 
 MAIN
     STRING sample("This is a sample string");

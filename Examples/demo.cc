@@ -1,9 +1,9 @@
 
-#include "../jade.hpp"
+#include "../include/jade.hpp"
 
 
 MAIN
-  DIM AS STRING mystring = "This is a string.";
+  STRING mystring = "This is a string.";
 
   PRINT ( "LEFT(mystring,4)" );
   PRINT (LEFT$(mystring,4));
@@ -62,7 +62,7 @@ MAIN
   PRINT ();
 
   PRINT ( "LOADFILE$()" );
-  DIM AS STRING fileContents, fname = "demo.cpp";
+  STRING fileContents, fname = "demo.cpp";
   fileContents = LOADFILE$(fname);
 //  PRINT ( "Printing contents of \"" + fname + "\"" );
 //  PRINT (fileContents);

@@ -1,4 +1,4 @@
-#include "../jade.hpp"
+#include "../include/jade.hpp"
 
 MAIN
     VAR MyArray = SPLIT("pear,cranberry,orange,apple,carrot,banana,grape,peaches,tangerines",",");

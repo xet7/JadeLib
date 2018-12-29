@@ -1,4 +1,4 @@
-#include "../jade.hpp"
+#include "../include/jade.hpp"
 
 MAIN 
     PRINT(EXTRACT$("filename.bas",".bas"));
