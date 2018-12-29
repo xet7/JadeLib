@@ -14,7 +14,6 @@
 /* DEFINES */
 #define MAIN int main (int argc, char** argv) {
 #define ENDMAIN }
-#define DECLARE
 #define FUNCTION
 #define SUB void
 #define END }
@@ -122,7 +121,7 @@ STRING ENC$ (STRING  A, INT L, INT R);
 STRING REPLACE$ (STRING subject, CONSTANT STRING& search, CONSTANT STRING& replace);
 INT VAL (STRING str);
 STRING GRAB$ (CONSTANT STRING &src, CONSTANT STRING &start, CONSTANT STRING &stop);
-SUB ABORT(STRING msg, STRING offendingline = "");
+SUB ABORT (STRING msg, STRING offendingline = "");
 INTEGER ASC (STRING Value, INTEGER cnt = 0);
 SUB COPYFILE ( STRING src_file, STRING dest_file );
 STRING EXTRACT$ (STRING src, STRING match);
@@ -130,13 +129,16 @@ STRING REMAIN$ (STRING src, STRING match);
 STRING REPEAT$ (STRING input, INTEGER num, STRING sep = "");
 INTEGER TALLY (STRING subject, STRING search);
 SUB PRINT();
+BOOL STARTS_WITH (CONSTANT STRING str, CONSTANT STRING prefix);
+BOOL ENDS_WITH (CONSTANT STRING str, CONSTANT STRING ending);
+
 
 /* This templated function
  * handles printing comma-seperated
  * objects....
  * */
 template<typename T, typename... Args>
-void PRINT(const T begin, const Args... args ) {
+void PRINT(CONSTANT T begin, CONSTANT Args... args ) {
     std::cout << begin;
     PRINT(args...);
 }
