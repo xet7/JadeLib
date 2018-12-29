@@ -15,7 +15,6 @@ $(LIB): $(OBJECTS)
 	@mkdir -p ./lib
 	@$(AR) $(LIB) $(OBJECTS)
 	@echo
-	@rm -f $(OBJECTS)
 	@echo "$(LIB) Created."
 	@echo
  
