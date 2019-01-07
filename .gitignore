@@ -3,4 +3,5 @@ lib/
 *.o
 bin/
 generate-keywords
+libjade.*
 
