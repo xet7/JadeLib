@@ -71,7 +71,9 @@ So I can invoke the compilation of the demo above like so:
 
 You can post your questions/comments at: [JADE Sub-Forum on allbasic.info](https://www.allbasic.info/forum/index.php?board=22.0)
 
+<a name="licence">
 ## Licence ##
+</a>
 
 **Jade is licenced under the MIT License**
 
