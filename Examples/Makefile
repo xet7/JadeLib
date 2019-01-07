@@ -1,6 +1,6 @@
 # JADE Examples Makefile
 CC = g++
-CC_FLAGS = --std=c++11 -I../include -O2 -s -L../ -ljade
+CC_FLAGS = --std=c++11 -I../include -O2 -s -L../lib -ljade
  
  
 # File names
