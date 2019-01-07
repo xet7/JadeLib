@@ -4,7 +4,7 @@
 
 ### JADE consists of a C++ include file with Defines/Macros, and a library of Functions that seeks to provide an easier way of creating C++ code.
 
-#### JADE is licensed under the [MIT License](#Licence).
+#### JADE is licensed under the [MIT License](#license).
 
 
 ### This is a proof of concept using a BASIC-like syntax to program C++.
