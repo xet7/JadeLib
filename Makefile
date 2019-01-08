@@ -29,9 +29,9 @@ endif
 $(LIB): $(OBJECTS)
 	@-$(MKDIR) $(LIBFOLDER)
 	@$(AR) $(LIB) $(OBJECTS)
-	@echo.
+	@echo ""
 	@echo "$(LIB) Created."
-	@echo.
+	@echo ""
  
 # To obtain object files
 %.o: %.cc
