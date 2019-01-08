@@ -1,6 +1,7 @@
 .DS_Store
 lib/
 *.o
+*.exe
 bin/
 generate-keywords
 libjade.*
