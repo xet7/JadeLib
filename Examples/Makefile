@@ -1,23 +1,43 @@
 # JADE Examples Makefile
 CC = g++
-CC_FLAGS = --std=c++11 -I../include -O2 -s -L../lib -ljade
+CC_FLAGS = --std=c++11 -O2 -s 
  
  
 # File names
 SOURCES = $(wildcard *.cc)
 TARGETS = $(SOURCES:.cc=)
-BIN=./bin
+
+ifeq ($(OS),Windows_NT)
+	BIN=.\bin
+	CC_FLAGS += -I..\include -L..\lib -ljade
+	MKDIR=md
+	RM=del
+	RMBIN=rmdir /s /q $(BIN)
+else
+	BIN=./bin
+	CC_FLAGS += -I../include -L../lib -ljade
+	MKDIR=mkdir -p
+	RM=rm
+	RMBIN=rm -r $(BIN)
+endif
  
 # Main target
-all: $(TARGETS)
+all: BIN_FOLDER $(TARGETS)
 
 %: %.cc
-	@mkdir -p $(BIN)
-	@$(CC) $(CC_FLAGS) $< -o $(BIN)/$@
-	@echo "Compiling $@..." 
+
+	@$(CC) $< $(CC_FLAGS)  -o $(BIN)/$@
+	@echo "Compiling $@..."
+
+
 
 .PHONY: clean
 clean: 
-	@ if [ -d $(BIN) ];then rm -r $(BIN);fi
-	@echo "Removed: $(TARGETS)."
+	@-$(RMBIN)
+	@echo "Removed Demo Files."
+
+BIN_FOLDER:
+	@-$(MKDIR) $(BIN)
+
+
 	

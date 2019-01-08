@@ -10,13 +10,28 @@ AR = ar -rcs
 SOURCES = $(wildcard *.cc)
 OBJECTS = $(SOURCES:.cc=.o)
 PREFIX = /usr/local
+
+ifeq ($(OS),Windows_NT)
+	MKDIR=md
+	LIBFOLDER=.\lib
+	RMDIR=rmdir /s /q
+	RM=del /s
+else
+	MKDIR=mkdir -p
+	LIBFOLDER=./lib
+	RMDIR=rm -r
+	RM=rm
+endif
+
+
+
 # Main target
 $(LIB): $(OBJECTS)
-	@mkdir -p ./lib
+	@-$(MKDIR) $(LIBFOLDER)
 	@$(AR) $(LIB) $(OBJECTS)
-	@echo
+	@echo.
 	@echo "$(LIB) Created."
-	@echo
+	@echo.
  
 # To obtain object files
 %.o: %.cc
@@ -39,6 +54,6 @@ uninstall:
 
 # To remove generated files
 clean:
-	@rm -f $(LIB) $(OBJECTS)
-	@ if [ -d ./lib ];then rmdir ./lib;fi
+	@-$(RMDIR) $(LIBFOLDER)
+	@-$(RM) $(OBJECTS)
 	@echo "Removed: Library"
