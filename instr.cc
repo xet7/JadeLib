@@ -4,6 +4,6 @@ FUNCTION INT INSTR (STRING  s,STRING  match, size_t offset) DO
   IF (s.empty() OR match.empty() OR offset>s.length()) THEN
       RETURN 0;
   ENDIF
-  RETURN s.find(match,offset);
+  RETURN s.find(match,offset)+1;
 END
 
