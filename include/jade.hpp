@@ -131,7 +131,9 @@ FUNCTION INTEGER TALLY (STRING subject, STRING search);
 SUB PRINT();
 FUNCTION BOOL STARTS_WITH (CONSTANT STRING str, CONSTANT STRING prefix);
 FUNCTION BOOL ENDS_WITH (CONSTANT STRING str, CONSTANT STRING ending);
-
+FUNCTION STRING HEX$(long num);
+FUNCTION STRING OCT$(long num);
+FUNCTION STRING BIN$(long num);
 
 /* This templated function
  * handles printing comma-seperated
