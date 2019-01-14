@@ -134,6 +134,9 @@ FUNCTION BOOL ENDS_WITH (CONSTANT STRING str, CONSTANT STRING ending);
 FUNCTION STRING HEX$(long num);
 FUNCTION STRING OCT$(long num);
 FUNCTION STRING BIN$(long num);
+FUNCTION STRING LPAD$(std::string str, const size_t num, const char paddingChar = ' ');
+FUNCTION STRING RPAD$(std::string str, const size_t num, const char paddingChar = ' ');
+FUNCTION STRING PAD$(std::string str, const size_t num, const char paddingChar = ' ');
 
 /* This templated function
  * handles printing comma-seperated
