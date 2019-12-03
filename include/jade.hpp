@@ -77,7 +77,7 @@
 #define ENDCONSTRUCTOR }
 #define DO {
 #define NEXT }
-#define LEN (x) x.size()
+#define LEN(x) x.size()
 #define PRINTNL printf("\n")
 #define NL std::endl
 #define VAR auto
