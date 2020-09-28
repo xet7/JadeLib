@@ -1,5 +1,7 @@
 #include "include/jade.hpp"
-#include <bits/stdc++.h>
+#ifdef linux
+    #include <bits/stdc++.h>
+#endif
 
 FUNCTION STRING BIN$(long num) DO
     std::bitset< sizeof(num)*CHAR_BIT > bits( num );
