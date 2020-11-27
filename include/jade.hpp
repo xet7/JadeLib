@@ -12,7 +12,9 @@
 #include <cstdarg>
 
 /* DEFINES */
-#define MAIN int main (int argc, char** argv) {
+#define MAIN                      \
+  int main(int argc, char **argv) \
+  {
 #define ENDMAIN }
 #define FUNCTION
 #define SUB void
@@ -29,7 +31,10 @@
 #define NOT not
 #define IF if
 #define THEN {
-#define ELSE } else {
+#define ELSE \
+  }          \
+  else       \
+  {
 #define ENDIF }
 #define FOR for
 #define IN :
@@ -65,14 +70,19 @@
 /************************/
 
 #define CHAR char
-#define ENUM enum {
-#define ENDENUM };
+#define ENUM enum \
+{
+#define ENDENUM \
+  }             \
+  ;
 #define EXIT exit
 #define BREAK break;
 #define SHORT short
-#define LPCHAR char*
+#define LPCHAR char *
 #define CLASS class
-#define ENDCLASS };
+#define ENDCLASS \
+  }              \
+  ;
 #define CONSTRUCTOR
 #define ENDCONSTRUCTOR }
 #define DO {
@@ -81,14 +91,14 @@
 #define PRINTNL printf("\n")
 #define NL std::endl
 #define VAR auto
-#define SORT(x) std::sort(x.begin(),x.end())
+#define SORT(x) std::sort(x.begin(), x.end())
 
 #ifndef TRUE
-  #define TRUE 1
+#define TRUE 1
 #endif
 
 #ifndef FALSE
-  #define FALSE 0
+#define FALSE 0
 #endif
 
 /* TYPEDEFS */
@@ -99,38 +109,38 @@ typedef std::smatch REGMATCH;
 typedef std::ofstream OUTFILE;
 
 /* PROTOTYPES */
-FUNCTION BOOL EXISTS (STRING filename);
-FUNCTION STRING REGEX (STRING src, STRING query);
-FUNCTION VECTOR<STRING> SPLIT (CONSTANT STRING src, CONSTANT STRING delim=" ");
-FUNCTION STRING FORMAT$ (CONSTANT STRING fmt, ...);
-FUNCTION STRING REVERSE$ (STRING src);
-FUNCTION STRING LTRIM$ (STRING s);
-FUNCTION STRING RTRIM$ (STRING s);
-FUNCTION STRING TRIM$ (STRING s);
-FUNCTION STRING LEFT$ (STRING s, INT length);
-FUNCTION STRING MID$ (STRING s, INT start, INT length);
-FUNCTION STRING RIGHT$ (STRING s, INT length);
-FUNCTION INT INSTR (STRING  s,STRING  match, size_t offset=0);
-FUNCTION STRING LCASE$ (STRING str);
-FUNCTION STRING UCASE$ (STRING str);
-FUNCTION STRING MCASE$ (STRING S);
-FUNCTION STRING LOADFILE$ (STRING N);
-SUB SAVEFILE (STRING src, STRING fname);
-FUNCTION STRING SPLITPATH$ (STRING FPATH, INT mask);
-FUNCTION STRING ENC$ (STRING  A, INT L, INT R);
-FUNCTION STRING REPLACE$ (STRING subject, CONSTANT STRING& search, CONSTANT STRING& replace);
-FUNCTION INT VAL (STRING str);
-FUNCTION STRING GRAB$ (CONSTANT STRING &src, CONSTANT STRING &start, CONSTANT STRING &stop);
-SUB ABORT (STRING msg, STRING offendingline = "");
-FUNCTION INTEGER ASC (STRING Value, INTEGER cnt = 0);
-SUB COPYFILE ( STRING src_file, STRING dest_file );
-FUNCTION STRING EXTRACT$ (STRING src, STRING match);
-FUNCTION STRING REMAIN$ (STRING src, STRING match);
-FUNCTION STRING REPEAT$ (STRING input, INTEGER num, STRING sep = "");
-FUNCTION INTEGER TALLY (STRING subject, STRING search);
+FUNCTION BOOL EXISTS(STRING filename);
+FUNCTION STRING REGEX(STRING src, STRING query);
+FUNCTION VECTOR<STRING> SPLIT(CONSTANT STRING src, CONSTANT STRING delim = " ");
+FUNCTION STRING FORMAT$(CONSTANT STRING fmt, ...);
+FUNCTION STRING REVERSE$(STRING src);
+FUNCTION STRING LTRIM$(STRING s);
+FUNCTION STRING RTRIM$(STRING s);
+FUNCTION STRING TRIM$(STRING s);
+FUNCTION STRING LEFT$(STRING s, INT length);
+FUNCTION STRING MID$(STRING s, INT start, INT length);
+FUNCTION STRING RIGHT$(STRING s, INT length);
+FUNCTION INT INSTR(STRING s, STRING match, size_t offset = 0);
+FUNCTION STRING LCASE$(STRING str);
+FUNCTION STRING UCASE$(STRING str);
+FUNCTION STRING MCASE$(STRING S);
+FUNCTION STRING LOADFILE$(STRING N);
+SUB SAVEFILE(STRING src, STRING fname);
+FUNCTION STRING SPLITPATH$(STRING FPATH, INT mask);
+FUNCTION STRING ENC$(STRING A, INT L = 34, INT R = 34);
+FUNCTION STRING REPLACE$(STRING subject, CONSTANT STRING &search, CONSTANT STRING &replace);
+FUNCTION INT VAL(STRING str);
+FUNCTION STRING GRAB$(CONSTANT STRING &src, CONSTANT STRING &start, CONSTANT STRING &stop);
+SUB ABORT(STRING msg, STRING offendingline = "");
+FUNCTION INTEGER ASC(STRING Value, INTEGER cnt = 0);
+SUB COPYFILE(STRING src_file, STRING dest_file);
+FUNCTION STRING EXTRACT$(STRING src, STRING match);
+FUNCTION STRING REMAIN$(STRING src, STRING match);
+FUNCTION STRING REPEAT$(STRING input, INTEGER num, STRING sep = "");
+FUNCTION INTEGER TALLY(STRING subject, STRING search);
 SUB PRINT();
-FUNCTION BOOL STARTS_WITH (CONSTANT STRING str, CONSTANT STRING prefix);
-FUNCTION BOOL ENDS_WITH (CONSTANT STRING str, CONSTANT STRING ending);
+FUNCTION BOOL STARTS_WITH(CONSTANT STRING str, CONSTANT STRING prefix);
+FUNCTION BOOL ENDS_WITH(CONSTANT STRING str, CONSTANT STRING ending);
 FUNCTION STRING HEX$(long num);
 FUNCTION STRING OCT$(long num);
 FUNCTION STRING BIN$(long num);
@@ -142,9 +152,9 @@ FUNCTION STRING PAD$(std::string str, const size_t num, const char paddingChar =
  * handles printing comma-seperated
  * objects....
  * */
-template<typename T, typename... Args>
-void PRINT(CONSTANT T begin, CONSTANT Args... args ) {
-    std::cout << begin;
-    PRINT(args...);
+template <typename T, typename... Args>
+void PRINT(CONSTANT T begin, CONSTANT Args... args)
+{
+  std::cout << begin;
+  PRINT(args...);
 }
-
