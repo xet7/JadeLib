@@ -10,6 +10,7 @@
 #include <iterator>
 #include <stdexcept>
 #include <cstdarg>
+#include <numeric>
 
 /* DEFINES */
 #define MAIN                      \
