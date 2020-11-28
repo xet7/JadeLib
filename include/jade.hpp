@@ -11,6 +11,7 @@
 #include <stdexcept>
 #include <cstdarg>
 #include <numeric>
+#include <cstdio>
 
 /* DEFINES */
 #define MAIN                      \
