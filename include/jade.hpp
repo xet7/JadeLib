@@ -147,6 +147,9 @@ FUNCTION STRING BIN$(long num);
 FUNCTION STRING LPAD$(std::string str, const size_t num, const char paddingChar = ' ');
 FUNCTION STRING RPAD$(std::string str, const size_t num, const char paddingChar = ' ');
 FUNCTION STRING PAD$(std::string str, const size_t num, const char paddingChar = ' ');
+SUB CLEAR();
+SUB COLOR(int fg, int bg);
+SUB LOCATE(int row, int col);
 
 /* This templated function
  * handles printing comma-seperated
