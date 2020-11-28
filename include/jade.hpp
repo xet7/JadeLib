@@ -153,6 +153,7 @@ SUB COLOR(int fg, int bg);
 SUB LOCATE(int row, int col);
 FUNCTION STRING INPUT(STRING prompt);
 FUNCTION ARRAY<long> RANGE(long low, long high);
+FUNCTION STRING CHR$(INTEGER num);
 
 /* This templated function
  * handles printing comma-seperated
