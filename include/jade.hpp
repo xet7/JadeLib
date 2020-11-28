@@ -150,6 +150,7 @@ FUNCTION STRING PAD$(std::string str, const size_t num, const char paddingChar =
 SUB CLEAR();
 SUB COLOR(int fg, int bg);
 SUB LOCATE(int row, int col);
+FUNCTION STRING INPUT(STRING prompt);
 
 /* This templated function
  * handles printing comma-seperated
