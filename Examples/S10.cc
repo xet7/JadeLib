@@ -15,7 +15,7 @@ MAIN
 
     PRINT(C$);
 
-    IF(EXISTS(A$)) THEN
+    IF(EXIST(A$)) THEN
         KILLFILE(A$);
     END
 END
