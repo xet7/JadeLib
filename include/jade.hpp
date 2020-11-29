@@ -11,7 +11,10 @@
 #include <stdexcept>
 #include <cstdarg>
 #include <numeric>
+#include <cstdlib>
 #include <cstdio>
+#include <chrono>
+#include <thread>
 
 /* DEFINES */
 #define MAIN                      \
@@ -58,6 +61,7 @@
 #define INT int
 #define INTEGER int
 #define UINT unsigned int
+
 
 /*
  * The following three objects 
@@ -159,6 +163,7 @@ FUNCTION STRING CHR$(INTEGER num);
 FUNCTION STRING TIME$(INTEGER val);
 FUNCTION STRING DATE$();
 FUNCTION STRING TIME$();
+SUB SLEEP(INTEGER millisec);
 
 /* This templated function
  * handles printing comma-seperated
