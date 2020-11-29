@@ -18,8 +18,13 @@
 
 /* DEFINES */
 #define MAIN                      \
+  char   **G_argv;         \
+  int     G_argc;          \
   int main(int argc, char **argv) \
-  {
+  {                               \
+    G_argc = argc;                \
+    G_argv = argv;
+
 #define ENDMAIN }
 #define FUNCTION
 #define SUB void
@@ -164,6 +169,8 @@ FUNCTION STRING TIME$(INTEGER val);
 FUNCTION STRING DATE$();
 FUNCTION STRING TIME$();
 SUB SLEEP(INTEGER millisec);
+FUNCTION STRING COMMAND$();
+FUNCTION STRING COMMAND$(INTEGER nArg);
 
 /* This templated function
  * handles printing comma-seperated
