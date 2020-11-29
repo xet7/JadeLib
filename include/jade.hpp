@@ -158,7 +158,7 @@ FUNCTION ARRAY<long> RANGE(long low, long high);
 FUNCTION STRING CHR$(INTEGER num);
 FUNCTION STRING TIME$(INTEGER val);
 FUNCTION STRING DATE$();
-FUNCTION STRING TIMENOW();
+FUNCTION STRING TIME$();
 
 /* This templated function
  * handles printing comma-seperated

@@ -2,5 +2,5 @@
 
 
 MAIN
-    PRINT("Today is ", DATE$(), " and the time is ", TIMENOW() );
+    PRINT("Today is ", DATE$(), " and the time is ", TIME$() );
 END
