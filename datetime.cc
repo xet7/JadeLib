@@ -4,6 +4,12 @@ FUNCTION STRING DATE$() DO
     RETURN TIME$(12);
 END
 
+FUNCTION STRING TIMENOW() DO
+    STRING curTime;
+    curTime = TIME$(0) + " "+TIME$(4);
+    RETURN curTime;
+END
+
 FUNCTION STRING TIME$(INTEGER val) DO
   time_t elapse_time;
   struct tm *tp;
@@ -12,7 +18,7 @@ FUNCTION STRING TIME$(INTEGER val) DO
   tp = localtime(&elapse_time);
   SELECT (val) DO
    CASE 0:
-    std::strftime(strtmp,256,"%H:%M:%S",tp); break;
+    std::strftime(strtmp,256,"%I:%M:%S",tp); break;
    CASE 1:
     std::strftime(strtmp,256,"%H",tp); break;
    CASE 2:
