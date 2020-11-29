@@ -156,6 +156,8 @@ SUB LOCATE(int row, int col);
 FUNCTION STRING INPUT(STRING prompt);
 FUNCTION ARRAY<long> RANGE(long low, long high);
 FUNCTION STRING CHR$(INTEGER num);
+FUNCTION STRING TIME$(INTEGER val);
+FUNCTION STRING DATE$();
 
 /* This templated function
  * handles printing comma-seperated
