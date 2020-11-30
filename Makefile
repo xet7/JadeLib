@@ -7,18 +7,20 @@ CC_FLAGS = -I. --std=c++11 -O2 -c
 LIB = lib/libjade.a
 INC = ./include/jade.hpp
 AR = ar -rcs
-SOURCES = $(wildcard *.cc)
+SOURCES = $(wildcard src/*.cc)
 OBJECTS = $(SOURCES:.cc=.o)
 PREFIX = /usr/local
 
 ifeq ($(OS),Windows_NT)
 	MKDIR=md
 	LIBFOLDER=.\lib
+	OBJFOLDER=.\obj
 	RMDIR=rmdir /s /q
 	RM=del /s
 else
 	MKDIR=mkdir -p
 	LIBFOLDER=./lib
+	OBJFOLDER=./obj
 	RMDIR=rm -r
 	RM=rm
 endif
@@ -28,15 +30,16 @@ endif
 # Main target
 $(LIB): $(OBJECTS)
 	@-$(MKDIR) $(LIBFOLDER)
-	@$(AR) $(LIB) $(OBJECTS)
+	@$(AR) $(LIB) $(OBJFOLDER)/*.o
 	@echo ""
 	@echo "$(LIB) Created."
 	@echo ""
  
 # To obtain object files
 %.o: %.cc
-	@$(CC) $(CC_FLAGS) $< -o $@
-	@echo "Creating $@ "
+	@-$(MKDIR) $(OBJFOLDER)
+	@$(CC) $(CC_FLAGS) $< -o $(OBJFOLDER)/$(notdir $@)
+	@echo "Creating $(notdir $@) "
 
 install: $(LIB)
 	@echo "Installing..."
@@ -55,5 +58,5 @@ uninstall:
 # To remove generated files
 clean:
 	@-$(RMDIR) $(LIBFOLDER)
-	@-$(RM) $(OBJECTS)
+	@-$(RMDIR) $(OBJFOLDER)
 	@echo "Removed: Library"
