@@ -1,10 +1,5 @@
 #include <jade.hpp>
 
-// STRING CHR$(INTEGER num){
-//     STRING s;
-//     s = num;
-//     return s;
-// }
 
 MAIN
     STRING A$;
