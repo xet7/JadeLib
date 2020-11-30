@@ -175,6 +175,7 @@ SUB SLEEP(INTEGER millisec);
 FUNCTION STRING COMMAND$();
 FUNCTION STRING COMMAND$(INTEGER nArg);
 SUB RUN(STRING command);
+FUNCTION STRING EXEC(STRING cmd);
 
 /* This templated function
  * handles printing comma-seperated
