@@ -15,6 +15,9 @@
 #include <cstdio>
 #include <chrono>
 #include <thread>
+#ifdef __linux__
+  #include <climits>
+#endif
 
 /* DEFINES */
 #define MAIN                      \
