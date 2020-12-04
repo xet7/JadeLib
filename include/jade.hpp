@@ -18,6 +18,13 @@
 #ifdef __linux__
   #include <climits>
 #endif
+#ifdef JADE_CURL
+  #include <curl/curl.h>
+#endif
+
+
+
+
 
 /* DEFINES */
 #define MAIN                      \
@@ -115,12 +122,18 @@
 #define FALSE 0
 #endif
 
+
+
 /* TYPEDEFS */
 typedef std::string STRING;
 typedef std::vector<std::string> STRARRAY;
 typedef std::regex REGQUERY;
 typedef std::smatch REGMATCH;
 typedef std::ofstream OUTFILE;
+#ifdef JADE_CURL
+  typedef int (*JADE_PROGRESS_CALLBACK) (void*,double,double,double,double);
+  typedef int (*JADE_WRITE_CALLBACK) (void*,long,long,void*);
+#endif
 
 /* PROTOTYPES */
 FUNCTION BOOL EXIST(STRING filename);
@@ -176,6 +189,16 @@ FUNCTION STRING COMMAND$();
 FUNCTION STRING COMMAND$(INTEGER nArg);
 SUB RUN(STRING command);
 FUNCTION STRING EXEC(STRING cmd);
+
+#ifdef JADE_CURL
+  void downloadFile(STRING url, STRING downloadFileName, void *progress_callback);
+  
+  int jade_curl_progress_callback(void* clientp, double dltotal, double dlnow, double ultotal, double ulnow );
+  int jade_curl_write_data_callback (void* content, long size, long nmemb, void* stream);
+  FUNCTION STRING downloadPage(STRING url,JADE_WRITE_CALLBACK write_callback = jade_curl_write_data_callback);
+#endif
+
+
 
 /* This templated function
  * handles printing comma-seperated
