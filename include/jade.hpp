@@ -117,7 +117,8 @@
 #define SORT(x) std::sort(x.begin(), x.end())
 #define PAUSE std::cout << "\nPress Enter to Continue.."; std::cin.get(); 
         // std::cout <<std::endl;
-
+#define STRUCT struct
+#define ENDSTRUCT };
 #ifndef TRUE
 #define TRUE 1
 #endif
