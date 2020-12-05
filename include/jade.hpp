@@ -113,6 +113,8 @@
 #define NL std::endl
 #define VAR auto
 #define SORT(x) std::sort(x.begin(), x.end())
+#define PAUSE std::cout << "\nPress Enter to Continue.."; std::cin.get(); 
+        // std::cout <<std::endl;
 
 #ifndef TRUE
 #define TRUE 1
