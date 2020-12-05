@@ -214,3 +214,19 @@ void PRINT(CONSTANT T begin, CONSTANT Args... args)
   std::cout << begin;
   PRINT(args...);
 }
+
+CLASS ComputerInfo DO
+    STRING dig_cmd = "dig +short myip.opendns.com @resolver1.opendns.com";
+    #if defined(__APPLE__)
+    STRING route_cmd = "route get 1.0.0.0";
+    #elif defined(__linux__)
+    STRING route_cmd = "ip route show default";
+    #endif
+
+    STRING getComputerName();
+
+    public:
+        STRING iface,adapter,macaddress,ip,external,username,computername;
+        ComputerInfo();
+
+ENDCLASS
