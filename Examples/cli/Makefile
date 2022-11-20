@@ -9,13 +9,13 @@ TARGETS = $(SOURCES:.cc=)
 
 ifeq ($(OS),Windows_NT)
 	BIN=.\bin
-	CC_FLAGS += -I..\include -L..\lib -ljade
+	CC_FLAGS += -I..\..\include -L..\..\lib -ljade
 	MKDIR=md
 	RM=del
 	RMBIN=rmdir /s /q $(BIN)
 else
 	BIN=./bin
-	CC_FLAGS += -I../include -L../lib -ljade
+	CC_FLAGS += -I../../include -L../../lib -ljade
 	MKDIR=mkdir -p
 	RM=rm
 	RMBIN=rm -r $(BIN)
@@ -39,5 +39,3 @@ clean:
 BIN_FOLDER:
 	@-$(MKDIR) $(BIN)
 
-
-	
