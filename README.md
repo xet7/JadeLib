@@ -1,5 +1,12 @@
 # JADE
 
+JADE is BASIC-like syntax to program C++, using header file.
+
+- Newest JADE upstream: https://git.binarymagic.net/AIR/jade
+- Mirror of upstream: https://github.com/binarymagicnet/jade
+- Originally was at https://git.binarymagic.net/AIR/JadeLib
+- This repo is old fork of old original repo with some examples added from JadeLib forum. Those same examples could also be at newest upstream at https://git.binarymagic.net/AIR/JadeLib
+
 ### *(Jade's A Developing Experiment)*
 
 ### JADE consists of a C++ include file with Defines/Macros, and a library of Functions that seeks to provide an easier way of creating C++ code.
